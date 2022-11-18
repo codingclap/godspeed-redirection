@@ -37,7 +37,7 @@
                     85% 40%,
                     calc(100% + 2.5rem) 70%,
                     calc(100% + 1.5rem) bottom,
-                    4% 11rem,
+                    4% 10rem,
                     center calc(100% + 0.5rem);
                 background-size: 12rem,
                     8rem,
@@ -338,14 +338,11 @@
                     width: 300px;
                     transition: 0.3s ease-in-out;
                 }
-                .logo-3:hover #care-2{
-                    display: flex; 
+                 .logo-3:hover{ 
+                    transform: scale(1.0345);
                     transition: 0.3s ease-in-out;
                 }
-                .logo-3:hover #care-1{
-                    display: none; 
-                    transition: 0.3s ease-in-out;
-                }
+                
                 #care-2{
                     display: none;
                     transition: 0.3s ease-in-out;
@@ -366,8 +363,8 @@
                 </div>
                 <div class="logo-3">
                     <a href="https://cares.godspeedgroup.ca/" target="_blank">
-                        <img src="images/godspeed-care.png" alt="11" id="care-1" width="100%">
-                        <img src="images/godspeed-care-gif.gif" alt="11" id="care-2" width="100%">
+                        <img id="news" src="images/godspeed-care.png" onmouseover="onHover();" onmouseout="offHover();" alt="11" id="care-1" width="100%">
+                        
                     </a>
                       
 
@@ -384,7 +381,21 @@
 
         </div>
     </section>
-
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+    <script>
+        function onHover()
+        {
+            $("#news").attr('src', 'images/godspeed-care-gif.gif');
+        }
+    
+        function offHover()
+        {
+            $("#news").attr('src', 'images/godspeed-care.png');
+        }
+    </script>
 </body>
 
 </html>
